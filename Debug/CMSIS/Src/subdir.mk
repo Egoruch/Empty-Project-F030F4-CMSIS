@@ -15,5 +15,5 @@ C_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 CMSIS/Src/system_stm32f0xx.o: ../CMSIS/Src/system_stm32f0xx.c
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32 -DSTM32F0 -DDEBUG -DSTM32F030F4Px -c -I"D:/STM32/CubeIDE/Empty-Project-CMSIS/Inc" -I"D:/STM32/CubeIDE/Empty-Project-CMSIS/CMSIS/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"CMSIS/Src/system_stm32f0xx.d" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32 -DSTM32F0 -DDEBUG -DSTM32F030F4Px -c -I"D:/STM32/CubeIDE/Empty-Project-F030F4-CMSIS/CMSIS/Inc" -I"D:/STM32/CubeIDE/Empty-Project-F030F4-CMSIS/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"CMSIS/Src/system_stm32f0xx.d" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
 

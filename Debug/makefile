@@ -28,34 +28,34 @@ endif
 
 -include ../makefile.defs
 
-BUILD_ARTIFACT_NAME := Empty-Project-CMSIS
+BUILD_ARTIFACT_NAME := Empty-Project-F030F4-CMSIS
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX := 
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME).$(BUILD_ARTIFACT_EXTENSION)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Empty-Project-CMSIS.elf \
+Empty-Project-F030F4-CMSIS.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Empty-Project-CMSIS.list \
+Empty-Project-F030F4-CMSIS.list \
 
 OBJCOPY_BIN += \
-Empty-Project-CMSIS.bin \
+Empty-Project-F030F4-CMSIS.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Empty-Project-CMSIS.elf secondary-outputs
+main-build: Empty-Project-F030F4-CMSIS.elf secondary-outputs
 
 # Tool invocations
-Empty-Project-CMSIS.elf: $(OBJS) $(USER_OBJS) D:\STM32\CubeIDE\Empty-Project-CMSIS\STM32F030F4PX_FLASH.ld
-	arm-none-eabi-gcc -o "Empty-Project-CMSIS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"D:\STM32\CubeIDE\Empty-Project-CMSIS\STM32F030F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Empty-Project-CMSIS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Empty-Project-F030F4-CMSIS.elf: $(OBJS) $(USER_OBJS) D:\STM32\CubeIDE\Empty-Project-F030F4-CMSIS\STM32F030F4PX_FLASH.ld
+	arm-none-eabi-gcc -o "Empty-Project-F030F4-CMSIS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"D:\STM32\CubeIDE\Empty-Project-F030F4-CMSIS\STM32F030F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Empty-Project-F030F4-CMSIS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -64,13 +64,13 @@ default.size.stdout: $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Empty-Project-CMSIS.list: $(EXECUTABLES)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Empty-Project-CMSIS.list"
+Empty-Project-F030F4-CMSIS.list: $(EXECUTABLES)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Empty-Project-F030F4-CMSIS.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Empty-Project-CMSIS.bin: $(EXECUTABLES)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Empty-Project-CMSIS.bin"
+Empty-Project-F030F4-CMSIS.bin: $(EXECUTABLES)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Empty-Project-F030F4-CMSIS.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
