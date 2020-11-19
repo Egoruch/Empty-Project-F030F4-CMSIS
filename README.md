@@ -6,5 +6,7 @@ ___
 * STM32F030F4P6
 * STM32CubeIDE
 * CMSIS
- ## Build Analyzer
- ![alt text]( https://github.com/Egoruch/Empty-Project-F030F4-CMSIS/blob/main/Img/build_an_f030f4p6.png)
+ ## STM32CubeIDE (Build Project)
+  ![alt text](https://github.com/Egoruch/Empty-Project-F030F4-CMSIS/blob/main/Img/cubeide_window_f030f4p6.png)
+ ## Build Analyzer (without LED blinking)
+ ![alt text](https://github.com/Egoruch/Empty-Project-F030F4-CMSIS/blob/main/Img/build_an_f030f4p6.png)
